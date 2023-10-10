@@ -1,16 +1,58 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #[em LocalLibrary], a very basic Express website developed as a tutorial example on the Mozilla Developer Network.
+  style.
+    body {
+      background-color: #1e1e1e; /* Fundo azul escuro */
+      color: #fff; /* Cor do texto */
+      font-family: Arial, sans-serif;
+    }
 
-  h1 Dynamic content
+    .container {
+      background-color: #252525; /* Cor de fundo para o container principal */
+      padding: 20px;
+      border-radius: 5px;
+      margin: 20px auto;
+      max-width: 800px;
+    }
 
-  p The library has the following record counts:
+    h1 {
+      color: #ff5733; /* Cor do título */
+    }
 
-  ul
-    li #[strong Books:] !{book_count}
-    li #[strong Copies:] !{book_instance_count}
-    li #[strong Copies available:] !{book_instance_available_count}
-    li #[strong Authors:] !{author_count}
-    li #[strong Genres:] !{genre_count}
+    p {
+      color: #b0b0b0; /* Cor do texto normal */
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 5px;
+      /* Adicione mudanças de cor leves aqui, por exemplo, alternando entre duas cores */
+    }
+
+    li:nth-child(odd) {
+      background-color: #353535; /* Cor de fundo para linhas ímpares */
+    }
+
+    li:nth-child(even) {
+      background-color: #2e2e2e; /* Cor de fundo para linhas pares */
+    }
+
+  .container
+    h1= title
+    p Bem vindo ao #[em LocalLibrary], a very basic Express website developed as a tutorial example on the Mozilla Developer Network.
+
+    h1 Dynamic content
+
+    p The library has the following record counts:
+
+    ul
+      li #[strong Books:] !{book_count}
+      li #[strong Copies:] !{book_instance_count}
+      li #[strong Copies available:] !{book_instance_available_count}
+      li #[strong Authors:] !{author_count}
+      li #[strong Genres:] !{genre_count}

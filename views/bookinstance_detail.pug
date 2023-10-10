@@ -1,6 +1,40 @@
 extends layout
 
 block content
+  style.
+    body {
+      background-color: #1e1e1e; /* Fundo azul escuro */
+      color: #fff; /* Cor do texto */
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #ff5733; /* Cor do título */
+    }
+
+    p {
+      color: #b0b0b0; /* Cor do texto normal */
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 5px;
+      /* Adicione mudanças de cor leves aqui, por exemplo, alternando entre duas cores */
+    }
+
+    li:nth-child(odd) {
+      background-color: #353535; /* Cor de fundo para linhas ímpares */
+    }
+
+    li:nth-child(even) {
+      background-color: #2e2e2e; /* Cor de fundo para linhas pares */
+    }
+
+  .container
 
   h1 ID: #{bookinstance._id}
 
